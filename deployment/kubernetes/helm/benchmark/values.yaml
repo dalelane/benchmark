@@ -13,14 +13,14 @@
 #
 
 numWorkers: 8
-image: openmessaging/openmessaging-benchmark:latest
+image: image-registry.openshift-image-registry.svc:5000/openmessaging/benchmark:latest
 imagePullPolicy: Always
 workload: workloads/1-topic-16-partitions-1kb.yaml
-driver: driver-pulsar/pulsar.yaml
+driver: driver-kafka/kafka-throughput.yaml
 
 # Resource Configurations
-driverMemoryRequest: 512Mi
-driverMemoryLimit: 2048Mi
+driverMemoryRequest: 2Gi
+driverMemoryLimit: 6Gi
 
-#workersMemoryRequest: 512Mi
-#workersMemoryLimit: 2048Mi
+workersMemoryRequest: 2Gi
+workersMemoryLimit: 6Gi
