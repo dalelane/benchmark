@@ -23,7 +23,7 @@ topicConfig: |
   min.insync.replicas=2
 
 commonConfig: |
-  bootstrap.servers=localhost:9092
+  bootstrap.servers=my-kafka-cluster-kafka-bootstrap.event-automation.svc:9092
 
 producerConfig: |
   acks=all
